@@ -2,3 +2,13 @@ flask
 mypy
 pre-commit
 pytest
+pandas
+numpy
+matplotlib
+seaborn
+plotly
+dash
+streamlit
+openpyxl
+jupyter
+scikit-learn

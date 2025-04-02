@@ -1,0 +1,12 @@
+[tool.black]
+line-length = 88
+preview = false
+
+[tool.flake8]
+max-line-length = 88
+max-complexity = 10
+exclude = [".venv", "*.tox"]
+extend-ignore = ['W503']
+
+[tool.pytest.ini_options]
+norecursedirs = ["eggs"]

@@ -1,0 +1,4 @@
+flask
+mypy
+pre-commit
+pytest

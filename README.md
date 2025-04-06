@@ -1,103 +1,140 @@
 # 📊 Dashboard Interativo de Análise de Vendas
-
-Este projeto foi desenvolvido como parte do **CASE PS 25.1 Estágio BI** da empresa **Lumen Store**, com o objetivo de aplicar técnicas de análise de dados e visualização interativa. Através de um dashboard construído com **Python** e **JupyterDash**, é possível explorar indicadores de vendas por canal, filial, produto e período, facilitando a tomada de decisão com base em dados reais.
+Este projeto foi desenvolvido como parte do **CASE PS 25.1 Estágio BI** da empresa fictícia **Lumen Store**, com o objetivo de aplicar técnicas de análise de dados e criar um dashboard interativo para responder a perguntas estratégicas de negócio.
 
 ---
 
 ## 🎯 Objetivo
 
-Analisar de forma automatizada os dados de vendas de uma empresa fictícia, respondendo às perguntas do case proposto, por meio de um dashboard interativo que oferece visões estratégicas sobre o desempenho comercial.
+Desenvolver uma solução completa de Business Intelligence utilizando Python para analisar os dados de vendas de uma empresa. A entrega inclui:
+- Tratamento e limpeza de dados;
+- Criação de métricas e KPIs;
+- Visualizações interativas através de um dashboard.
 
 ---
 
-## ⚙️ Tecnologias Utilizadas
+## 🛠 Tecnologias Utilizadas
 
 - **Python 3.10+**
-- **Pandas** – Manipulação de dados
-- **Plotly** – Visualização de gráficos interativos
-- **JupyterDash** – Criação de dashboards interativos em notebooks
+- **Pandas** – Manipulação e análise de dados
 - **NumPy** – Operações numéricas
-- **Jupyter Notebook** – Ambiente de desenvolvimento e visualização
+- **Plotly** – Criação de gráficos interativos
+- **JupyterDash** – Construção do dashboard interativo em ambiente Jupyter
+- **Jupyter Notebook** – Execução dos notebooks
+- **VS Code** – Ambiente de desenvolvimento
+- **Virtualenv** – Gerenciamento de ambiente virtual
 
 ---
 
-## 🧹 Etapas de Tratamento e Limpeza dos Dados
+## 📁 Estrutura do Projeto
 
-- Renomeação e padronização dos nomes das colunas.
-- Conversão de datas para datetime e extração de informações temporais (ano, mês, dia).
-- Remoção de valores duplicados.
-- Tratamento de valores ausentes.
-- Criação de colunas auxiliares, como:
-  - Mês/Ano formatado.
-  - Faturamento total (valor monetário total + desconto).
-  - Cálculo de métricas como ticket médio, margem de lucro, entre outras.
+```
+📦 projeto-lumenstore/
+├── dashboard_lumenstore.ipynb      # Dashboard interativo com visualizações
+├── limpeza.ipynb                   # Notebook de limpeza e tratamento de dados
+├── processamento.ipynb             # Notebook com criação de métricas e KPIs
+├── dados_completos.csv             # Arquivo com os dados já tratados
+├── requirements.txt                # Lista de dependências do projeto
+└── README.md                       # Este arquivo
+```
 
 ---
 
-## 📊 Gráficos e Análises Implementadas
+## 🔎 Ordem de Execução e Análise
 
-O dashboard interativo permite navegar entre as seguintes visualizações:
+Siga os passos abaixo **na ordem indicada** para garantir o funcionamento correto do projeto:
+
+### 1. Pré-requisitos
+
+- Ter o **Python 3.10+** instalado
+- Ter o **VS Code com a extensão Jupyter** habilitada
+- Ter o **Git** instalado (opcional, caso deseje clonar o repositório)
+
+### 2. Clonar o repositório
+
+```bash
+git clone <URL_DO_REPOSITORIO>
+cd projeto-lumenstore
+```
+
+### 3. Criar e ativar o ambiente virtual
+
+```bash
+python -m venv venv
+source venv/bin/activate    # Linux/Mac
+venv\Scripts\activate       # Windows
+```
+
+### 4. Instalar as dependências
+
+```bash
+pip install -r requirements.txt
+```
+
+### 5. Executar os Notebooks
+
+#### 🧹 Etapa 1 – Limpeza dos Dados
+
+- Abra o notebook `limpeza.ipynb`
+- Execute todas as células
+- Esta etapa realiza:
+  - Renomeação de colunas
+  - Conversão de datas
+  - Tratamento de duplicatas e valores ausentes
+  - Criação de colunas auxiliares como:
+    - `Mes_Ano`, `Faturamento Total`, `Desconto Aplicado`, `Ticket Médio`
+
+#### ⚙️ Etapa 2 – Processamento e Cálculo de Métricas
+
+- Abra o notebook `processamento.ipynb`
+- Execute todas as células
+- Métricas geradas:
+  - Faturamento por mês, canal, filial
+  - Top 5 produtos por família
+  - Ticket médio por canal e por filial
+  - Curva ABC
+  - Participação no faturamento
+  - Comparação entre períodos
+
+#### 📊 Etapa 3 – Visualização Interativa
+
+- Abra o notebook `dashboard_lumenstore.ipynb`
+- Execute todas as células
+- O dashboard será iniciado automaticamente no navegador
+- Permite seleção de filtros e visualizações dinâmicas
+
+---
+
+## 📊 Gráficos e Métricas Disponíveis no Dashboard
 
 1. **Curva ABC por Família de Produtos**  
-   Classifica as famílias que mais geram faturamento com base no conceito de Pareto.
-
 2. **Faturamento Mensal**  
-   Exibe a evolução do faturamento por mês e ano, permitindo visualizar sazonalidades.
-
 3. **Participação das Filiais no Faturamento**  
-   Compara o faturamento acumulado entre diferentes filiais.
-
 4. **Ticket Médio por Canal de Venda (SAH)**  
-   Calcula o ticket médio (faturamento médio por pedido) para cada canal de venda.
-
 5. **Top 5 Produtos Mais Vendidos por Família**  
-   Exibe os cinco produtos com maior volume de vendas dentro de cada família de produtos.
-
 6. **Evolução Temporal das Vendas**  
-   Permite analisar tendências gerais e picos de vendas ao longo do tempo.
-
 7. **Ticket Médio por Filial**  
-   Mostra a média de faturamento por pedido em cada filial.
-
 8. **Distribuição de Vendas por Categoria de Produto**  
-   Visualiza a distribuição percentual do faturamento entre categorias de produto.
-
 9. **Comparação de Vendas entre Períodos**  
-   Permite comparar o desempenho de vendas entre dois intervalos de tempo selecionados.
+
+Todos os gráficos são interativos e reagem dinamicamente conforme os filtros aplicados.
 
 ---
 
-## 🛠 Como visualizar o projeto no VS Code
+## 🧾 Requisitos
 
-Se você deseja executar o projeto e visualizar as análises, siga os passos abaixo:
+Um arquivo `requirements.txt` está incluso com todas as dependências. Para gerar novamente:
 
-1. **Clone o repositório** (se ainda não tiver feito):
-   ```bash
-   git clone <URL_DO_REPOSITORIO>
-   ```
-2. **Acesse o diretório do projeto:**
-   ```bash
-   cd nome_do_projeto
-   ```
-3. **Crie e ative um ambiente virtual (recomendado):**
-   ```bash
-   python -m venv venv
-   source venv/bin/activate  # Linux/Mac
-   venv\Scripts\activate  # Windows
-   ```
-4. **Instale as dependências necessárias:**
-   ```bash
-   pip install -r requirements.txt
-   ```
-5. **Abra o VS Code e execute os notebooks Jupyter:**
-   - No terminal do VS Code, execute:
-     ```bash
-     code .
-     ```
-   - Abra a pasta dos notebooks.
-   - Execute as células para visualizar os gráficos e análises.
+```bash
+pip freeze > requirements.txt
+```
+
+---
 
 ## 🔗 Contato
-Caso tenha dúvidas ou sugestões, fique à vontade para entrar em contato!
 
-🚀 _Projeto em desenvolvimento!_
+Caso tenha dúvidas, sugestões ou queira colaborar com melhorias, sinta-se à vontade para entrar em contato.
+
+📧 **breno.luiz.contato@email.com**  
+📍 **Engenharia de Controle e Automação | Ciência de Dados | BI | Python**
+
+---

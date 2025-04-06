@@ -1,28 +1,71 @@
-# 📊 Projeto de Análise de Dados de Vendas
+# 📊 Dashboard Interativo de Análise de Vendas
 
-Este projeto tem como objetivo analisar os dados de vendas de uma empresa, buscando insights que possam melhorar a tomada de decisão. Para isso, utilizamos Python, Pandas, Seaborn e Matplotlib para manipulação, visualização e análise dos dados.
+Este projeto foi desenvolvido como parte do **CASE PS 25.1 Estágio BI** da empresa **Lumen Store**, com o objetivo de aplicar técnicas de análise de dados e visualização interativa. Através de um dashboard construído com **Python** e **JupyterDash**, é possível explorar indicadores de vendas por canal, filial, produto e período, facilitando a tomada de decisão com base em dados reais.
 
-## 📌 O que já foi feito
+---
 
-### **1. Tratamento e Limpeza de Dados**
-- Padronização de colunas e correção de valores inconsistentes.
-- Conversão de datas para formato adequado.
-- Remoção de dados duplicados e tratamento de valores ausentes.
+## 🎯 Objetivo
 
-### **2. Geração de Gráficos e Análises**
-Os seguintes gráficos foram gerados até o momento:
-- **Curva ABC das Famílias de Produtos**
-- **Faturamento Mensal**
-- **Participação das Filiais no Faturamento**
+Analisar de forma automatizada os dados de vendas de uma empresa fictícia, respondendo às perguntas do case proposto, por meio de um dashboard interativo que oferece visões estratégicas sobre o desempenho comercial.
 
-## 📌 O que ainda precisa ser feito
+---
 
-🔲 **Finalizar a análise dos Top 5 produtos mais vendidos dentro de cada família**
-🔲 **Evolução das vendas ao longo do tempo**
-🔲 **Ticket médio por filial**
-🔲 **Distribuição de vendas por categoria de produto**
-🔲 **Comparação de vendas entre diferentes períodos**
-🔲 **Outros gráficos relevantes baseados na análise exploratória**
+## ⚙️ Tecnologias Utilizadas
+
+- **Python 3.10+**
+- **Pandas** – Manipulação de dados
+- **Plotly** – Visualização de gráficos interativos
+- **JupyterDash** – Criação de dashboards interativos em notebooks
+- **NumPy** – Operações numéricas
+- **Jupyter Notebook** – Ambiente de desenvolvimento e visualização
+
+---
+
+## 🧹 Etapas de Tratamento e Limpeza dos Dados
+
+- Renomeação e padronização dos nomes das colunas.
+- Conversão de datas para datetime e extração de informações temporais (ano, mês, dia).
+- Remoção de valores duplicados.
+- Tratamento de valores ausentes.
+- Criação de colunas auxiliares, como:
+  - Mês/Ano formatado.
+  - Faturamento total (valor monetário total + desconto).
+  - Cálculo de métricas como ticket médio, margem de lucro, entre outras.
+
+---
+
+## 📊 Gráficos e Análises Implementadas
+
+O dashboard interativo permite navegar entre as seguintes visualizações:
+
+1. **Curva ABC por Família de Produtos**  
+   Classifica as famílias que mais geram faturamento com base no conceito de Pareto.
+
+2. **Faturamento Mensal**  
+   Exibe a evolução do faturamento por mês e ano, permitindo visualizar sazonalidades.
+
+3. **Participação das Filiais no Faturamento**  
+   Compara o faturamento acumulado entre diferentes filiais.
+
+4. **Ticket Médio por Canal de Venda (SAH)**  
+   Calcula o ticket médio (faturamento médio por pedido) para cada canal de venda.
+
+5. **Top 5 Produtos Mais Vendidos por Família**  
+   Exibe os cinco produtos com maior volume de vendas dentro de cada família de produtos.
+
+6. **Evolução Temporal das Vendas**  
+   Permite analisar tendências gerais e picos de vendas ao longo do tempo.
+
+7. **Ticket Médio por Filial**  
+   Mostra a média de faturamento por pedido em cada filial.
+
+8. **Distribuição de Vendas por Categoria de Produto**  
+   Visualiza a distribuição percentual do faturamento entre categorias de produto.
+
+9. **Comparação de Vendas entre Períodos**  
+   Permite comparar o desempenho de vendas entre dois intervalos de tempo selecionados.
+
+---
 
 ## 🛠 Como visualizar o projeto no VS Code
 

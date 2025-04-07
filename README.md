@@ -1,3 +1,4 @@
+
 # 📊 Dashboard Interativo de Análise de Vendas
 Este projeto foi desenvolvido como parte do **CASE PS 25.1 Estágio BI** da empresa fictícia **Lumen Store**, com o objetivo de aplicar técnicas de análise de dados e criar um dashboard interativo para responder a perguntas estratégicas de negócio.
 
@@ -28,13 +29,25 @@ Desenvolver uma solução completa de Business Intelligence utilizando Python pa
 ## 📁 Estrutura do Projeto
 
 ```
-📦 projeto-lumenstore/
-├── dashboard_lumenstore.ipynb      # Dashboard interativo com visualizações
-├── limpeza.ipynb                   # Notebook de limpeza e tratamento de dados
-├── processamento.ipynb             # Notebook com criação de métricas e KPIs
-├── dados_completos.csv             # Arquivo com os dados já tratados
-├── requirements.txt                # Lista de dependências do projeto
-└── README.md                       # Este arquivo
+📦 EQUALS/
+├── main/
+│   ├── clean_data/
+│   │   ├── dados_completos.csv               # Dados tratados e prontos para análise
+│   │   ├── dim_familia_produtos_limpo.csv    # Dimensão família de produtos (limpo)
+│   │   ├── dim_produtos_limpo.csv            # Dimensão produtos (limpo)
+│   │   ├── dim_vendedor_limpo.csv            # Dimensão vendedores (limpo)
+│   │   └── fato_vendas_limpo.csv             # Fato vendas (limpo)
+│   ├── data/
+│   │   ├── dim_familia_produtos.csv          # Dados brutos de família de produtos
+│   │   ├── dim_produtos.csv                  # Dados brutos de produtos
+│   │   ├── dim_vendedor.csv                  # Dados brutos de vendedores
+│   │   └── fato_vendas.csv                   # Fato vendas bruto
+│   ├── dashboard_lumenstore.ipynb            # Dashboard interativo com visualizações
+│   ├── limpeza.ipynb                         # Notebook de limpeza e tratamento de dados
+│   └── processamento.ipynb                   # Notebook com criação de métricas e KPIs
+├── requirements.txt                          # Lista de dependências do projeto
+├── pyproject.toml                            # Configurações do projeto (opcional)
+└── README.md                                 # Este arquivo
 ```
 
 ---
@@ -53,15 +66,15 @@ Siga os passos abaixo **na ordem indicada** para garantir o funcionamento corret
 
 ```bash
 git clone <URL_DO_REPOSITORIO>
-cd projeto-lumenstore
+cd EQUALS
 ```
 
 ### 3. Criar e ativar o ambiente virtual
 
 ```bash
-python -m venv venv
-source venv/bin/activate    # Linux/Mac
-venv\Scripts\activate       # Windows
+python -m venv .venv
+source .venv/bin/activate    # Linux/Mac
+.venv\Scripts\activate       # Windows
 ```
 
 ### 4. Instalar as dependências
@@ -122,7 +135,7 @@ Todos os gráficos são interativos e reagem dinamicamente conforme os filtros a
 
 ## 🧾 Requisitos
 
-Um arquivo `requirements.txt` está incluso com todas as dependências. Para gerar novamente:
+Um arquivo `requirements.txt` está incluído com todas as dependências. Para gerar novamente:
 
 ```bash
 pip freeze > requirements.txt
@@ -134,7 +147,5 @@ pip freeze > requirements.txt
 
 Caso tenha dúvidas, sugestões ou queira colaborar com melhorias, sinta-se à vontade para entrar em contato.
 
-📧 **breno.luiz.contato@email.com**  
+📧 **brenluiz13@gmail.com**  
 📍 **Engenharia de Controle e Automação | Ciência de Dados | BI | Python**
-
----
